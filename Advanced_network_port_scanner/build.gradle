@@ -1,0 +1,26 @@
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.bdcyberninja'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'com.bdcyberninja.gui.ScannerGUI'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
